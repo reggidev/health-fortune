@@ -1,3 +1,7 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["@reggidev/eslint-config/next"],
+  "plugins": ["simple-import-sort", "react"],
+  "rules": {
+    "simple-import-sort/imports": "error"
+  }
 }
