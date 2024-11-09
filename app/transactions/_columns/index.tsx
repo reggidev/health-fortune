@@ -1,6 +1,6 @@
 'use client'
 
-import { type Transaction } from '@prisma/client'
+import { type Transaction, TransactionCategory } from '@prisma/client'
 import { ColumnDef } from '@tanstack/react-table'
 import { PencilIcon, TrashIcon } from 'lucide-react'
 
