@@ -2,7 +2,7 @@ import { CardContent, CardHeader, CardTitle } from '@/app/_components/ui/card'
 import { Progress } from '@/app/_components/ui/progress'
 import { ScrollArea } from '@/app/_components/ui/scroll-area'
 import { TRANSACTION_CATEGORY_LABELS } from '@/app/_constants/transactions'
-import type { TotalExpensePerCategory } from '@/app/_data/get-dashboard/types'
+import { TotalExpensePerCategory } from '@/app/_data/get-dashboard/types'
 
 interface ExpensesPerCategoryProps {
   expensesPerCategory: TotalExpensePerCategory[]
