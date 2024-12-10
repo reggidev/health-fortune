@@ -23,7 +23,6 @@ const SummaryCards = async ({
 }: SummaryCards) => {
   return (
     <div className="space-y-6">
-      {/* PRIMEIRO CARD */}
       <SummaryCard
         icon={<WalletIcon size={16} />}
         title="Saldo"
@@ -31,14 +30,7 @@ const SummaryCards = async ({
         size="large"
       />
 
-      {/* OUTROS CARDS */}
-      <div className="grid grid-cols-3 gap-6">
-        <SummaryCard
-          icon={<PiggyBankIcon size={16} />}
-          title="Investido"
-          amount={investmentsTotal}
-        />
-
+      <div className="grid grid-flow-col-dense gap-6 overflow-auto lg:grid-cols-3 [&::-webkit-scrollbar]:hidden">
         <SummaryCard
           icon={<TrendingUpIcon size={16} className="text-primary" />}
           title="Receita"
@@ -49,6 +41,12 @@ const SummaryCards = async ({
           icon={<TrendingDownIcon size={16} className="text-red-500" />}
           title="Despesas"
           amount={expensesTotal}
+        />
+
+        <SummaryCard
+          icon={<PiggyBankIcon size={16} />}
+          title="Investido"
+          amount={investmentsTotal}
         />
       </div>
     </div>
