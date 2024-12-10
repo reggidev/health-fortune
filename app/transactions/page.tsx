@@ -17,6 +17,9 @@ const TransactionsPage = async () => {
     where: {
       userId,
     },
+    orderBy: {
+      date: 'desc',
+    },
   })
   return (
     <>
@@ -27,7 +30,10 @@ const TransactionsPage = async () => {
           <h1 className="text-2xl font-bold">Transações</h1>
           <AddTransactionButton />
         </div>
-        <DataTable columns={TransactionsColumns} data={transactions} />
+        <DataTable
+          columns={TransactionsColumns}
+          data={JSON.parse(JSON.stringify(transactions))}
+        />
       </div>
     </>
   )
