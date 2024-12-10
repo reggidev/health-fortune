@@ -9,34 +9,50 @@ const NavBar = () => {
   const pathname = usePathname()
 
   return (
-    <nav className="flex justify-between border-b border-solid px-8 py-4">
-      <div className="flex items-center gap-10">
+    <>
+      {/* Desktop NavBar */}
+      <nav className="hidden justify-between border-b border-solid px-8 py-4 lg:flex">
+        <div className="flex items-center gap-10">
+          <Link href="/">
+            <Image
+              src="/logo.svg"
+              width={173}
+              height={39}
+              alt="Health Fortune"
+            />
+          </Link>
+          <Link
+            href="/"
+            className={
+              pathname === '/'
+                ? 'font-bold text-primary'
+                : 'text-muted-foreground'
+            }
+          >
+            Dashboard
+          </Link>
+          <Link
+            href="/transactions"
+            className={
+              pathname === '/transactions'
+                ? 'font-bold text-primary'
+                : 'text-muted-foreground'
+            }
+          >
+            Transações
+          </Link>
+        </div>
+        <UserButton showName />
+      </nav>
+
+      {/* Mobile NavBar */}
+      <nav className="flex items-center justify-between border-b px-6 py-5 lg:hidden">
         <Link href="/">
           <Image src="/logo.svg" width={173} height={39} alt="Health Fortune" />
         </Link>
-        <Link
-          href="/"
-          className={
-            pathname === '/'
-              ? 'font-bold text-primary'
-              : 'text-muted-foreground'
-          }
-        >
-          Dashboard
-        </Link>
-        <Link
-          href="/transactions"
-          className={
-            pathname === '/transactions'
-              ? 'font-bold text-primary'
-              : 'text-muted-foreground'
-          }
-        >
-          Transações
-        </Link>
-      </div>
-      <UserButton showName />
-    </nav>
+        <UserButton />
+      </nav>
+    </>
   )
 }
 
