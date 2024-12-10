@@ -11,7 +11,7 @@ const mulish = Mulish({
 })
 
 export const metadata: Metadata = {
-  title: 'Finance Web',
+  title: 'Health Fortune',
   description: 'Aplicativo Web para gestão de finanças | ReggiDev',
 }
 

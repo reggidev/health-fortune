@@ -12,7 +12,7 @@ const NavBar = () => {
     <nav className="flex justify-between border-b border-solid px-8 py-4">
       <div className="flex items-center gap-10">
         <Link href="/">
-          <Image src="/logo.svg" width={173} height={39} alt="Finance AI" />
+          <Image src="/logo.svg" width={173} height={39} alt="Health Fortune" />
         </Link>
         <Link
           href="/"
