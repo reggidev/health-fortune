@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation'
 
 import AddTransactionButton from '../_components/add-transaction-button'
 import NavBar from '../_components/navbar'
+import NavBarBottom from '../_components/navbar-bottom'
 import { DataTable } from '../_components/ui/data-table'
 import { ScrollArea } from '../_components/ui/scroll-area'
 import { db } from '../_lib/prisma'
@@ -37,6 +38,7 @@ const TransactionsPage = async () => {
           />
         </ScrollArea>
       </div>
+      <NavBarBottom />
     </>
   )
 }
