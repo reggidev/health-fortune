@@ -79,3 +79,20 @@ body {
     @apply h-full bg-background text-foreground;
   }
 }
+
+/* Scrollbar style */
+::-webkit-scrollbar {
+  @apply w-2; /* Width */
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background; /* Background color */
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-md; /* Color */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/80; /* Hover */
+}
