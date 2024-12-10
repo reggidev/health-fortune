@@ -3,6 +3,7 @@ import { isMatch } from 'date-fns'
 import { redirect } from 'next/navigation'
 
 import NavBar from '../_components/navbar'
+import NavBarBottom from '../_components/navbar-bottom'
 import { getDashboard } from '../_data/get-dashboard'
 import ExpensesPerCategory from './_components/expenses-per-category'
 import LastTransactions from './_components/last-transactions'
@@ -32,15 +33,15 @@ const Home = async ({ searchParams: { month } }: HomeProps) => {
   return (
     <>
       <NavBar />
-      <div className="flex flex-col space-y-6 overflow-hidden p-6">
+      <div className="flex flex-col space-y-6 p-6 lg:overflow-hidden">
         <div className="flex justify-between">
           <h1 className="text-2xl font-bold">Dashboard</h1>
           <TimeSelect />
         </div>
-        <div className="grid grid-cols-[2fr,1fr] gap-6 overflow-hidden">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[2fr,1fr] lg:overflow-hidden">
           <div className="flex flex-col gap-6 overflow-hidden">
             <SummaryCards month={month} {...dashboard} />
-            <div className="grid grid-cols-3 grid-rows-1 gap-6 overflow-hidden">
+            <div className="grid grid-cols-1 grid-rows-1 gap-y-6 lg:grid-cols-3 lg:gap-x-6 lg:overflow-hidden">
               <TransactionsPieChart {...dashboard} />
               <ExpensesPerCategory
                 expensesPerCategory={dashboard.totalExpensePerCategory}
@@ -50,6 +51,7 @@ const Home = async ({ searchParams: { month } }: HomeProps) => {
           <LastTransactions lastTransactions={dashboard.lastTransactions} />
         </div>
       </div>
+      <NavBarBottom />
     </>
   )
 }
