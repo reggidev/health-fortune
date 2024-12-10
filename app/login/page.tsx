@@ -13,8 +13,8 @@ const LoginPage = async () => {
   }
 
   return (
-    <div className="grid h-full grid-cols-2">
-      <div className="mx-auto flex h-full max-w-[550px] flex-col justify-center p-8">
+    <div className="grid h-full grid-cols-1 lg:grid-cols-2">
+      <div className="mx-auto flex h-full max-w-[550px] flex-col items-center justify-center p-8 lg:items-start">
         <Image
           src="/logo.svg"
           alt="Health Fortune"
@@ -23,7 +23,7 @@ const LoginPage = async () => {
           className="mb-8"
         />
         <h1 className="mb-3 text-4xl font-bold">Bem-vindo</h1>
-        <p className="mb-8 text-muted-foreground">
+        <p className="mb-8 max-w-sm text-center text-muted-foreground lg:max-w-none lg:text-left">
           O Health Fortune é uma plataforma de gestão financeira feito para
           monitorar suas movimentações, facilitando o controle do seu orçamento
         </p>
@@ -35,7 +35,7 @@ const LoginPage = async () => {
         </SignInButton>
       </div>
 
-      <div className="relative h-full w-full">
+      <div className="relative hidden h-full w-full lg:flex">
         <Image
           src="/login.png"
           alt="Faça login"
