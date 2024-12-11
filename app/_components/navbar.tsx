@@ -11,7 +11,7 @@ const NavBar = () => {
   return (
     <>
       {/* Desktop NavBar */}
-      <nav className="hidden justify-between border-b border-solid px-8 py-4 lg:flex">
+      <nav className="hidden justify-between border-b border-solid px-8 py-4 md:flex">
         <div className="flex items-center gap-10">
           <Link href="/">
             <Image
@@ -46,7 +46,7 @@ const NavBar = () => {
       </nav>
 
       {/* Mobile NavBar */}
-      <nav className="flex items-center justify-between border-b px-6 py-5 lg:hidden">
+      <nav className="flex items-center justify-between border-b px-6 py-5 md:hidden">
         <Link href="/">
           <Image src="/logo.svg" width={173} height={39} alt="Health Fortune" />
         </Link>

@@ -8,7 +8,7 @@ const NavBarBottom = () => {
   const pathname = usePathname()
 
   return (
-    <nav className="fixed bottom-0 left-0 grid w-full grid-cols-2 items-center justify-center border-t bg-background py-2 lg:hidden">
+    <nav className="fixed bottom-0 left-0 grid w-full grid-cols-2 items-center justify-center border-t bg-background py-2 md:hidden">
       <Link
         href="/"
         className={`border-r ${pathname === '/' ? 'font-bold text-primary' : ''}`}
