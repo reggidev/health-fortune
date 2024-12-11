@@ -11,38 +11,40 @@ const NavBar = () => {
   return (
     <>
       {/* Desktop NavBar */}
-      <nav className="hidden justify-between border-b border-solid px-8 py-4 md:flex">
-        <div className="flex items-center gap-10">
-          <Link href="/">
-            <Image
-              src="/logo.svg"
-              width={173}
-              height={39}
-              alt="Health Fortune"
-            />
-          </Link>
-          <Link
-            href="/"
-            className={
-              pathname === '/'
-                ? 'font-bold text-primary'
-                : 'text-muted-foreground'
-            }
-          >
-            Dashboard
-          </Link>
-          <Link
-            href="/transactions"
-            className={
-              pathname === '/transactions'
-                ? 'font-bold text-primary'
-                : 'text-muted-foreground'
-            }
-          >
-            Transações
-          </Link>
+      <nav className="hidden border-b border-solid px-8 py-4 md:block">
+        <div className="mx-auto max-w-[1160px] items-center justify-between md:flex">
+          <div className="flex items-center gap-10">
+            <Link href="/">
+              <Image
+                src="/logo.svg"
+                width={173}
+                height={39}
+                alt="Health Fortune"
+              />
+            </Link>
+            <Link
+              href="/"
+              className={
+                pathname === '/'
+                  ? 'font-bold text-primary'
+                  : 'text-muted-foreground'
+              }
+            >
+              Dashboard
+            </Link>
+            <Link
+              href="/transactions"
+              className={
+                pathname === '/transactions'
+                  ? 'font-bold text-primary'
+                  : 'text-muted-foreground'
+              }
+            >
+              Transações
+            </Link>
+          </div>
+          <UserButton showName />
         </div>
-        <UserButton showName />
       </nav>
 
       {/* Mobile NavBar */}
