@@ -90,7 +90,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-primary rounded-md; /* Color */
+  @apply bg-muted-foreground/60 rounded-md; /* Color */
 }
 
 ::-webkit-scrollbar-thumb:hover {
