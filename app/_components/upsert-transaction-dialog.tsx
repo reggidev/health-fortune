@@ -5,6 +5,7 @@ import {
   TransactionType,
 } from '@prisma/client'
 import { useForm } from 'react-hook-form'
+import { toast } from 'sonner'
 import { z } from 'zod'
 
 import { upsertTransaction } from '../_actions/upsert-transaction'
@@ -100,8 +101,11 @@ const UpsertTransactionDialog = ({
       await upsertTransaction({ ...data, id: transactionId })
       setIsOpen(false)
       form.reset()
+      isUpdate
+        ? toast.success('Transação atualizada com sucesso')
+        : toast.success('Transação adicionada com sucesso')
     } catch (error) {
-      console.error(error)
+      toast.error('Erro ao adicionar transação')
     }
   }
 
@@ -253,7 +257,7 @@ const UpsertTransactionDialog = ({
               )}
             />
 
-            <DialogFooter>
+            <DialogFooter className="gap-y-3">
               <DialogClose asChild>
                 <Button type="button" variant="outline">
                   Cancelar

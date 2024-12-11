@@ -11,5 +11,9 @@ export const upsertTransactionSchema = z.object({
   type: z.nativeEnum(TransactionType),
   category: z.nativeEnum(TransactionCategory),
   paymentMethod: z.nativeEnum(TransactionPaymentMethod),
-  date: z.date(),
+  date: z
+    .union([z.date(), z.string()])
+    .transform((value) =>
+      typeof value === 'string' ? new Date(value) : value,
+    ),
 })
