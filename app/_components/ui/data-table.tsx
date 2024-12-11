@@ -7,6 +7,7 @@ import {
   useReactTable,
 } from '@tanstack/react-table'
 
+import { ScrollBar } from './scroll-area'
 import {
   Table,
   TableBody,
@@ -75,6 +76,7 @@ export function DataTable<TData, TValue>({
           )}
         </TableBody>
       </Table>
+      <ScrollBar orientation="horizontal" />
     </div>
   )
 }
