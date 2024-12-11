@@ -80,6 +80,14 @@ body {
   }
 }
 
+/* Makes the app smaller on mobile */
+@media (max-width: 640px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+
 /* Scrollbar style */
 ::-webkit-scrollbar {
   @apply w-2; /* Width */
