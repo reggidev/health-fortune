@@ -54,18 +54,20 @@ export const TransactionsColumns: ColumnDef<Transaction>[] = [
   {
     accessorKey: 'amount',
     header: 'Valor',
-    cell: ({ row: { original: transaction } }) =>
-      new Intl.NumberFormat('pt-BR', {
+    cell: ({ row: { original: transaction } }) => {
+      const amount = new Intl.NumberFormat('pt-BR', {
         style: 'currency',
         currency: 'BRL',
-      }).format(Number(transaction.amount)),
+      }).format(Number(transaction.amount))
+      return <div className="w-24">{amount}</div>
+    },
   },
   {
     accessorKey: 'actions',
     header: '',
     cell: ({ row: { original: transaction } }) => {
       return (
-        <div className="space-x-1">
+        <div className="w-24 space-x-1">
           <EditTransactionButton transaction={transaction} />
           <DeleteTransactionButton transactionId={transaction.id} />
         </div>
