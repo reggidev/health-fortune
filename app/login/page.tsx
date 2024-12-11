@@ -20,7 +20,9 @@ const LoginPage = async () => {
           alt="Health Fortune"
           width={173}
           height={39}
+          style={{ width: 'auto', height: 'auto' }}
           className="mb-8"
+          priority
         />
         <h1 className="mb-3 text-4xl font-bold">Bem-vindo</h1>
         <p className="mb-8 max-w-sm text-center text-muted-foreground lg:max-w-none lg:text-left">

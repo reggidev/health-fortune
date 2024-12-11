@@ -19,7 +19,9 @@ const NavBar = () => {
                 src="/logo.svg"
                 width={173}
                 height={39}
+                style={{ width: 'auto', height: 'auto' }}
                 alt="Health Fortune"
+                priority
               />
             </Link>
             <Link
@@ -50,7 +52,14 @@ const NavBar = () => {
       {/* Mobile NavBar */}
       <nav className="flex items-center justify-between border-b px-6 py-5 md:hidden">
         <Link href="/">
-          <Image src="/logo.svg" width={173} height={39} alt="Health Fortune" />
+          <Image
+            src="/logo.svg"
+            width={173}
+            height={39}
+            style={{ width: 'auto', height: 'auto' }}
+            alt="Health Fortune"
+            priority
+          />
         </Link>
         <UserButton />
       </nav>
