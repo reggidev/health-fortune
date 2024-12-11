@@ -13,9 +13,9 @@ const NavBarBottom = () => {
         href="/"
         className={`border-r ${pathname === '/' ? 'font-bold text-primary' : ''}`}
       >
-        <div className="mx-auto flex w-fit flex-col items-center rounded-full px-6 py-2 hover:bg-muted-foreground/20">
-          <HouseIcon size={20} />
-          <p>Dashboard</p>
+        <div className="mx-auto flex w-fit flex-col items-center rounded-full px-6 py-1 hover:bg-muted-foreground/20">
+          <HouseIcon size={16} />
+          <p className="text-sm">Dashboard</p>
         </div>
       </Link>
 
@@ -23,9 +23,9 @@ const NavBarBottom = () => {
         href="/transactions"
         className={`${pathname === '/transactions' ? 'font-bold text-primary' : ''}`}
       >
-        <div className="mx-auto flex w-fit flex-col items-center rounded-full px-6 py-2 hover:bg-muted-foreground/20">
-          <ArrowLeftRightIcon size={20} />
-          <p>Transações</p>
+        <div className="mx-auto flex w-fit flex-col items-center rounded-full px-6 py-1 hover:bg-muted-foreground/20">
+          <ArrowLeftRightIcon size={16} />
+          <p className="text-sm">Transações</p>
         </div>
       </Link>
     </nav>
