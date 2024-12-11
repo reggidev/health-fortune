@@ -12,7 +12,7 @@ const NavBar = () => {
     <>
       {/* Desktop NavBar */}
       <nav className="hidden border-b border-solid px-8 py-4 md:block">
-        <div className="mx-auto max-w-[1160px] items-center justify-between md:flex">
+        <div className="mx-auto max-w-[1870px] items-center justify-between md:flex">
           <div className="flex items-center gap-10">
             <Link href="/">
               <Image

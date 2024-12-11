@@ -52,6 +52,12 @@ const config: Config = {
           "5": "hsl(var(--chart-5))",
         },
       },
+      container: {
+        center: true,
+        screens: {
+          "3xl": "1920px"
+        }
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
