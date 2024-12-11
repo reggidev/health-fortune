@@ -33,18 +33,23 @@ export const TransactionsColumns: ColumnDef<Transaction>[] = [
   {
     accessorKey: 'paymentMethod',
     header: 'Método de Pagamento',
-    cell: ({ row: { original: transaction } }) =>
-      TRANSACTION_PAYMENT_METHOD_LABELS[transaction.paymentMethod],
+    cell: ({ row: { original: transaction } }) => {
+      const paymentMethod =
+        TRANSACTION_PAYMENT_METHOD_LABELS[transaction.paymentMethod]
+      return <div className="w-[150px]">{paymentMethod}</div>
+    },
   },
   {
     accessorKey: 'date',
     header: 'Data',
-    cell: ({ row: { original: transaction } }) =>
-      new Date(transaction.date).toLocaleDateString('pt-BR', {
+    cell: ({ row: { original: transaction } }) => {
+      const date = new Date(transaction.date).toLocaleDateString('pt-BR', {
         day: '2-digit',
         month: 'long',
         year: 'numeric',
-      }),
+      })
+      return <div className="w-[175px]">{date}</div>
+    },
   },
   {
     accessorKey: 'amount',
