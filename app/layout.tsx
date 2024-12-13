@@ -12,7 +12,8 @@ const mulish = Mulish({
 
 export const metadata: Metadata = {
   title: 'Health Fortune',
-  description: 'Aplicativo Web para gestão de finanças | ReggiDev',
+  description:
+    'Gerencie suas finanças com eficiência: visualize gráficos, registre transações e acompanhe tudo em uma tabela detalhada | Desenvolvido por ReggiDev',
 }
 
 export default function RootLayout({
