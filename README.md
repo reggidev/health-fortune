@@ -1,7 +1,7 @@
 ![health-fortune-presentation](https://github.com/user-attachments/assets/e07d7faa-9218-41b6-8f98-f100e873a4cb)
 # Health Fortune 💸
 
-Sistema completo de gerenciamento financeiro O FSW Finanças é uma solução robusta para gestão financeira pessoal e empresarial. Ele permite aos usuários monitorar e controlar suas finanças com facilidade, integrando um backend eficiente e um banco de dados seguro.
+Sistema completo de gerenciamento financeiro. O Health Fortune é uma solução robusta para gestão financeira pessoal e empresarial. Ele permite aos usuários monitorar e controlar suas finanças com facilidade, integrando um backend eficiente e um banco de dados seguro.
 
 Visite agora: [Health Fortune](https://health-fortune.vercel.app/)
 
