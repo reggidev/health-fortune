@@ -8,7 +8,7 @@ import type {
   TransactionPercentagePerType,
 } from './types'
 
-export const getDashboard = async (month: string) => {
+export const getDashboard = async (month: string, year: string) => {
   const { userId } = await auth()
   if (!userId) {
     throw new Error('Unauthorized')
@@ -16,8 +16,8 @@ export const getDashboard = async (month: string) => {
   const where = {
     userId,
     date: {
-      gte: new Date(`2025-${month}-01`),
-      lt: new Date(`2025-${month}-31`),
+      gte: new Date(`${year}-${month}-01`),
+      lt: new Date(`${year}-${month}-31`),
     },
   }
 
